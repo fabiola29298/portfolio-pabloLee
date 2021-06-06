@@ -9,8 +9,8 @@
   --white: #FFFFFE;
   --grey: #5F6C7B;
   --basefontFamily: Inter, Helvetica, sans-serif;
-  --headline1: normal 4.5rem/5rem var(--basefontFamily);
-  --headline2: normal 4rem/4.75rem var(--basefontFamily);
+  --headline1: bold 4.5rem/5rem var(--basefontFamily);
+  --headline2: bold 4rem/4.75rem var(--basefontFamily);
   --headline3: bold 2rem/2rem var(--basefontFamily);
   --headline4: bold 1.5rem/1.65rem var(--basefontFamily);
   --headline5: normal 1.25rem/1.65rem var(--basefontFamily);
@@ -154,6 +154,10 @@ a:hover{
 .project-card{
   padding-block: 4rem;
 }
+.project-item:first-of-type {
+  display: flex;
+  justify-content: center;
+}
 .project-item > h2{
   color: var(--blue);
   font: var(--headline3);
@@ -190,7 +194,7 @@ a:hover{
   font: var(--headline3);
 }
 .contact * h3{
-  font: var(--headline4);
+  font: var(--headline3);
   color: var(--tertiary);
 }
 
@@ -212,4 +216,78 @@ a:hover{
 }
 .footer-social > a:hover{
   color: var(--backgroundButton);
+}
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+
+  .wrapper-size1 {
+    width: 676px;
+    margin: auto;
+  }
+  .wrapper-size2{
+    width: 1150px;
+    margin: auto;
+  }
+  .presentation * .button-primary{
+    width: 40%;
+  }
+  /* **********  projects **********  */
+  .project-card{
+    display: flex;
+  }
+  .project-item{
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 6rem;
+  }
+  .project-item > img{
+    width: 350px;
+  }
+  .project-buttonGroup{
+    display: flex;
+    gap: 1rem;
+  }
+  .project-card:nth-child(odd) .project-item:first-of-type{
+    order: 1;
+  }
+
+  /* ********** presentation  **********   */
+
+  .presentation * h1{
+    font: var(--headline1);
+  }
+
+  /* **********  projects **********  */
+  .project-item > h2{
+    font: var(--headline2);
+  }
+  /* **********  experience **********  */
+
+  .experience-title > h1{
+    font: var(--headline1);
+  }
+  .experience-item > h3{
+    font: var(--headline3);
+  }
+
+    /* **********  experience **********  */
+  .contact * h2{
+    font: var(--headline2);
+  }
+  .contact * h3{
+    font: var(--headline3);
+  }
+
+  /* **********  footer **********  */
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+  }
+  .footer-social{
+    flex-direction: row;
+    gap: 3rem;
+    margin: 0;
+  }
 }
