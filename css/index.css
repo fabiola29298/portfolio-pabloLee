@@ -13,7 +13,7 @@
   --headline2: bold 4rem/4.75rem var(--basefontFamily);
   --headline3: bold 2rem/2rem var(--basefontFamily);
   --headline4: bold 1.5rem/1.65rem var(--basefontFamily);
-  --headline5: normal 1.25rem/1.65rem var(--basefontFamily);
+  --headline5: bold 1.25rem/1.65rem var(--basefontFamily);
   --body2Bold: bold .875rem/1.68rem var(--basefontFamily);
   --body2: normal .875rem/1.68rem var(--basefontFamily);
   --body1Bold: bold 1.125rem/1.68rem var(--basefontFamily);
@@ -64,6 +64,12 @@ a:hover{
   font: var(--headline4);
   color: var(--secondary);
   text-decoration: none;
+}
+.panel-btn{
+  display: block;
+}
+.panel-nav{
+  display: none;
 }
 /* **********     menu-hamburguesa     ********** */
 
@@ -186,7 +192,7 @@ a:hover{
   font: var(--body1Bold);
 }
 
-  /* **********  experience **********  */
+  /* **********  contact **********  */
 .contact{
   padding-block: 4rem;
 }
@@ -194,7 +200,7 @@ a:hover{
   font: var(--headline3);
 }
 .contact * h3{
-  font: var(--headline3);
+  font: var(--headline5);
   color: var(--tertiary);
 }
 
@@ -231,6 +237,26 @@ a:hover{
   .presentation * .button-primary{
     width: 40%;
   }
+  /* ********** nav ********** */
+  .panel-btn{
+    display: none;
+  }
+  .panel-nav{
+    display: block;
+  }
+  .panel-menu > a{
+    font: var(--body2Bold);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--secondary);
+    margin-inline-end: .3rem;
+    padding-block-end: .3rem;
+    padding-inline: 1rem;
+  }
+  .panel-menu > a:hover{
+    color: var(--blue);
+    border-bottom: 2px solid var(--blue);
+  }
   /* **********  projects **********  */
   .project-card{
     display: flex;
@@ -250,17 +276,16 @@ a:hover{
   .project-card:nth-child(odd) .project-item:first-of-type{
     order: 1;
   }
-
+  .project-item > h2{
+    font: var(--headline2);
+  }
   /* ********** presentation  **********   */
 
   .presentation * h1{
     font: var(--headline1);
   }
 
-  /* **********  projects **********  */
-  .project-item > h2{
-    font: var(--headline2);
-  }
+
   /* **********  experience **********  */
 
   .experience-title > h1{
@@ -270,7 +295,7 @@ a:hover{
     font: var(--headline3);
   }
 
-    /* **********  experience **********  */
+    /* **********  contact **********  */
   .contact * h2{
     font: var(--headline2);
   }
