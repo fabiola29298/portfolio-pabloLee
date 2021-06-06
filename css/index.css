@@ -25,9 +25,31 @@ p{
   font: var(--body1);
   color: var(--grey);
 }
+a:hover{
+  color: var(--blue);
+}
+.button-primary, .button-secondary{
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font: var(--button);
+  color: var(--white);
+  margin-block-start: 1rem;
+}
+.button-primary{
+  border: 0;
+  background: var(--backgroundButton);
+}
+.button-secondary{
+  background: var(--white);
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
 .body{
   background: var(--white);
   margin: 0;
+  padding: 0;
 }
 .wrapper-size1, .wrapper-size2{
   margin-inline: 1.4rem;
@@ -129,30 +151,71 @@ p{
   font: var(--body2);
 
 }
-.button-primary, .button-secondary{
-  width: 100%;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font: var(--button);
-  color: var(--white);
-  margin-block-start: 1rem;
-}
-.button-primary{
-  border: 0;
-  background: var(--backgroundButton);
-}
-.button-secondary{
-  background: var(--white);
-  border: 2px solid var(--blue);
-  color: var(--blue);
-}
 
 
 /* **********  projects **********  */
 .projects{
   background: #D8EEFE;
 }
+.project-card{
+  padding-block: 4rem;
+}
 .project-item > h2{
   color: var(--blue);
   font: var(--headline3);
+}
+/* **********  experience **********  */
+.experience, .contact, .footer{
+  background: var(--blue);
+  color: var(--white);
+}
+.experience-item{
+  padding-block: 1rem;
+}
+.experience-title{
+  padding-block-start: 5rem;
+  border-bottom:  1px solid;
+}
+.experience-title > h1, .experience-item > h3{
+  color: var(--white);
+  font: var(--headline3);
+  margin: 0;
+}
+.experience * p{
+  color: var(--white);
+}
+.experience-item > p:first-of-type{
+  font: var(--body1Bold);
+}
+
+  /* **********  experience **********  */
+.contact{
+  padding-block: 4rem;
+}
+.contact * h2{
+  font: var(--headline3);
+}
+.contact * h3{
+  font: var(--headline4);
+  color: var(--tertiary);
+}
+
+/* **********  footer **********  */
+.footer-content > p{
+  font: var(--body1Bold);
+  color: var(--secondary);
+  margin: 0;
+}
+.footer-social{
+  padding-block: 2.5rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.footer-social > a{
+  color: var(--secondary);
+  font: var(--body2Bold);
+  text-transform: uppercase;
+}
+.footer-social > a:hover{
+  color: var(--backgroundButton);
 }
